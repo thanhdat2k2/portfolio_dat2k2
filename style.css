@@ -124,7 +124,7 @@ section {
   font-weight: 700;
 }
 
-.home content h3:nth-of-type(2) {
+.home-content h3:nth-of-type(2) {
   margin-bottom: 2rem;
 }
 
@@ -188,8 +188,9 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
   background: var(--snd-bg-color);
+  padding-bottom: 6rem;
 }
 
 .about-img img {
@@ -221,12 +222,27 @@ span {
 }
 
 .about-content h3 {
+  margin-top: 5rem;
   font-size: 3rem;
 }
 
-.about-content p {
+.about-content li {
+  list-style-position: inside;
+  padding-left: 1.5rem;
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+}
+
+.about-extra {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.25s ease;
+}
+
+.about-extra.is-expanded {
+  max-height: 1200px;
+  opacity: 1;
 }
 
 /* Projects Section Code */
@@ -239,7 +255,7 @@ span {
 .projects-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -260,10 +276,19 @@ span {
 }
 
 .projects-box h3 {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2.6rem;
 }
 
 .projects-box p {
+  flex-grow: 1;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
@@ -274,7 +299,7 @@ span {
   background: var(--snd-bg-color);
 }
 
-.contact heading {
+.contact .heading {
   text-align: center;
 }
 
@@ -320,6 +345,32 @@ span {
   cursor: pointer;
 }
 
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
+.toast.ok {
+  background: #4cd7a9;
+} /* xanh lá cho thành công */
+.toast.error {
+  background: #f17e7e;
+} /* đỏ cho lỗi */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Footer Section Code */
 
 .footer {
@@ -345,6 +396,12 @@ span {
   }
 }
 
+@media (max-width: 1024px) {
+  .projects-container {
+    gap: 1.6rem;
+  }
+}
+
 @media (max-width: 991px) {
   .header {
     padding: 2rem 3%;
@@ -361,12 +418,12 @@ span {
   .footer {
     padding: 2rem 3%;
   }
-}
-
-@media (max-width: 991px) {
   #menu-icon {
     display: block;
   }
+}
+
+@media (max-width: 991px) {
   .navbar {
     position: absolute;
     top: 100%;

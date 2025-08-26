@@ -73,14 +73,42 @@
     <section class="about" id="about">
       <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
-        <h3>Tôi là một <span>Front-End Developer</span></h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab doloremque
-          in officia odio cum distinctio. Delectus mollitia cupiditate tempora
-          quis iste deserunt dolore. Deleniti amet iusto repellat possimus? Hic,
-          repellendus.
-        </p>
-        <a href="#" class="btn">Read More</a>
+        <h3>Trình độ học vấn</h3>
+        <ul>
+          <li>Tốt nghiệp Đại học FPT</li>
+          <li>Chuyên ngành Trí tuệ nhân tạo</li>
+        </ul>
+
+        <h3>Kỹ năng</h3>
+        <ul>
+          <li>Ngôn ngữ lập trình: Python, Java, JavaScript</li>
+          <li>
+            Kỹ năng mềm: giao tiếp, trao đổi, xử lý vấn đề, làm việc nhóm...
+          </li>
+          <li>Kỹ năng khác: tin học văn phòng (excel, word, powerpoint)</li>
+        </ul>
+
+        <div
+          class="about-extra is-collapsed"
+          id="about-extra"
+          aria-hidden="true"
+        >
+          <h3>Công cụ sử dụng</h3>
+          <ul>
+            <li>Git/GitHub, VS Code</li>
+            <li>SQL Server</li>
+          </ul>
+        </div>
+
+        <a
+          href="#about"
+          id="readmore-btn"
+          class="btn"
+          role="button"
+          aria-controls="about-extra"
+          aria-expanded="false"
+          >Read More</a
+        >
       </div>
 
       <div class="about-img">
@@ -121,7 +149,11 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
 
-      <form action="#">
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/xqadkynd"
+        method="POST"
+      >
         <div class="input-box">
           <input type="text" name="name" placeholder="Họ và Tên" />
           <input type="email" name="email" placeholder="Địa chỉ Email" />
@@ -146,7 +178,7 @@
       <p class="copyright">&copy; DoThanhDat - All Rights Reserved</p>
     </footer>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
     <script src="script.js"></script>
   </body>
 </html>
