@@ -11,9 +11,9 @@
 
 :root {
   --bg-color: #fff;
-  --snd-bg-color: #d5fdf9;
+  --snd-bg-color: #c1d8f0;
   --text-color: #000;
-  --main-color: #007f73;
+  --main-color: #83addb;
 }
 
 html {
@@ -78,6 +78,7 @@ section {
   font-size: 3.6rem;
   color: var(--bg-color);
   cursor: pointer;
+  display: none;
 }
 
 /* Home Section Code */
@@ -183,7 +184,7 @@ span {
 
 /* About Me Section Code */
 
-.about-me {
+.about {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,7 +192,7 @@ span {
   background: var(--snd-bg-color);
 }
 
-.about-me-img img {
+.about-img img {
   width: 25vw;
   border: 2px solid var(--main-color);
   border-radius: 50%;
@@ -200,7 +201,7 @@ span {
   transition: 0.4s ease;
 }
 
-.about-me-img img:hover {
+.about-img img:hover {
   box-shadow: 0 0 25px var(--main-color), 0 0 35px var(--main-color),
     0 0 45px var(--main-color);
 }
@@ -210,20 +211,20 @@ span {
   text-align: center;
 }
 
-.about-me-content {
+.about-content {
   padding: 0 4rem;
 }
 
-.about-me-content h2 {
+.about-content h2 {
   text-align: left;
   line-height: 1.2;
 }
 
-.about-me-content h3 {
+.about-content h3 {
   font-size: 3rem;
 }
 
-.about-me-content p {
+.about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
@@ -404,10 +405,10 @@ span {
     width: 70vw;
     margin-top: 4rem;
   }
-  .about-me {
+  .about {
     flex-direction: column-reverse;
   }
-  .about-me-img {
+  .about-img img {
     width: 70vw;
     margin-top: 4rem;
   }
@@ -421,7 +422,7 @@ span {
     width: 70vw;
     margin-top: 8rem;
   }
-  .about-me-img img {
+  .about-img img {
     width: 70vw;
     margin-top: 4rem;
   }
