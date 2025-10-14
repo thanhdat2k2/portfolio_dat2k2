@@ -1,186 +1,115 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đỗ Thành Đạt - Portfolio</title>
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Datfolio</title>
   </head>
   <body>
-    <!-- Header Section Code -->
-
-    <header class="header">
-      <a href="#home" class="logo">Portfolio</a>
-
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
-
-      <nav class="navbar" id="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <!-- Header -->
+    <header>
+      <div class="logo">Datfolio.</div>
+      <i class="fa-solid fa-bars"></i>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <!-- <li><a href="#about">About</a></li> -->
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </header>
 
-    <!-- Home Section Code -->
-
+    <!-- Home Section -->
     <section class="home" id="home">
-      <div class="home-img">
-        <img src="assets/profile.jpeg" alt="Ảnh cá nhân" />
-      </div>
-
       <div class="home-content">
-        <h3>Xin chào, tôi là</h3>
-        <h1>Đỗ Thành Đạt</h1>
-        <h3><span class="multiple-text">Front-End Developer</span></h3>
+        <h2>Hello, I'm Thanh Dat</h2>
+        <hr />
+        <h3>Frontend Developer</h3>
         <p>
-          Với mong muốn được phát triển và củng cố kỹ năng trong ngành lập trình
-          web. Tôi đang cố gắng trau dồi các kiến thức về HTML, CSS, JavaScript
-          và cách sử dụng những thư viện hữu ích có sẵn. Hi vọng trong tương lai
-          gần tôi có thể trở thành một Full-Stack Developer.
+          I am a front-end developer with a passion for creating beautiful and
+          usable user interfaces. I focus on writing clean, responsive code and
+          delivering high-quality web experiences that combine creativity and
+          performance.
         </p>
-
-        <div class="social-media">
-          <a href="https://github.com/thanhdat2k2" alt="GitHub Profile"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/dothanhdat2k2/"
-            alt="Facebook Profile"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/datodayyy/"
-            alt="Instragram Profile"
-            ><i class="fa-brands fa-instagram"></i
+        <div class="home-btn">
+          <a href="#" class="btn">Contact Info</a>
+          <a href="#" class="btn"
+            >Download CV <i class="fa-regular fa-file"></i
           ></a>
         </div>
-        <a href="#" class="btn">Download CV</a>
+      </div>
+      <div class="home-img">
+        <img src="./assets/images/avatar.png" alt="My Avatar" />
       </div>
     </section>
-
-    <!-- About Me Section Code -->
-
-    <section class="about" id="about">
-      <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>Trình độ học vấn</h3>
-        <ul>
-          <li>Tốt nghiệp Đại học FPT</li>
-          <li>Chuyên ngành Trí tuệ nhân tạo</li>
-        </ul>
-
-        <h3>Kỹ năng</h3>
-        <ul>
-          <li>Ngôn ngữ lập trình: Python, Java, JavaScript</li>
-          <li>
-            Kỹ năng mềm: giao tiếp, trao đổi, xử lý vấn đề, làm việc nhóm...
-          </li>
-          <li>Kỹ năng khác: tin học văn phòng (excel, word, powerpoint)</li>
-        </ul>
-
-        <div
-          class="about-extra is-collapsed"
-          id="about-extra"
-          aria-hidden="true"
-        >
-          <h3>Công cụ sử dụng</h3>
-          <ul>
-            <li>Git/GitHub, VS Code</li>
-            <li>SQL Server</li>
-          </ul>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <div class="section-header">
+        <h2>My Skills</h2>
+        <hr />
+      </div>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Frontend Developer</h3>
+          <p>HTML, CSS, Javascript, Responsive Design</p>
         </div>
-
-        <a
-          href="#about"
-          id="readmore-btn"
-          class="btn"
-          role="button"
-          aria-controls="about-extra"
-          aria-expanded="false"
-          >Read More</a
-        >
-      </div>
-
-      <div class="about-img">
-        <img src="assets/profile.jpeg" alt="About Image" />
+        <div class="skill-card">
+          <i class="fa-solid fa-database"></i>
+          <h3>Backend Developer</h3>
+          <p>Python, Django, SQLite, SQL Server</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-code-branch"></i>
+          <h3>Version Control</h3>
+          <p>Git, Github</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-wrench"></i>
+          <h3>Tool & Technologies</h3>
+          <p>VS Code</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-brain"></i>
+          <h3>Soft Skills</h3>
+          <p>
+            Problem Solving, Critical Thinking, Time Management, Adaptability
+          </p>
+        </div>
       </div>
     </section>
-
-    <!-- Projects Section Code -->
-
+    <!-- About Section
+    <section class="about" id="about"></section> -->
+    <!-- Projects Section -->
     <section class="projects" id="projects">
-      <h2 class="heading">My <span>Projects</span></h2>
+      <div class="section-header">
+        <h2>My Projects</h2>
+        <hr />
+      </div>
+      <div class="type-project-btn">
+        <div class="btn">Small Components</div>
+        <div class="btn">Big Projects</div>
+        <div class="btn active">All</div>
+      </div>
       <div class="projects-container">
-        <div class="projects-box">
-          <h3>Billiard Club Recommendation Website</h3>
-          <p>
-            Gợi ý cho người dùng những câu lạc bộ, những quán billiard tại Hà
-            Nội có chất lượng, giá thành tốt.
-          </p>
-          <a href="#" class="btn">Xem demo</a>
-        </div>
-        <div class="projects-box">
-          <h3>To-do List</h3>
-          <p>
-            Giúp người dùng lên kế hoạch những công việc cần làm, trực quan hoá
-            tiến độ của kế hoạch.
-          </p>
-          <a href="https://thanhdat2k2.github.io/Me-To-Do-List/" class="btn"
-            >Xem demo</a
-          >
-        </div>
-        <div class="projects-box">
-          <h3>Notes App</h3>
-          <p>Ghi chú những thông tin cần thiết.</p>
-          <a href="#" class="btn">Xem demo</a>
+        <div class="project-card">
+          <img class="project-thumb" src="" alt="Project 1" />
         </div>
       </div>
     </section>
-
     <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me</span></h2>
-
-      <form
-        id="contact-form"
-        action="https://formspree.io/f/xqadkynd"
-        method="POST"
-      >
-        <div class="input-box">
-          <input type="text" name="name" placeholder="Họ và Tên" />
-          <input type="email" name="email" placeholder="Địa chỉ Email" />
-        </div>
-        <div class="input-box">
-          <input type="number" name="number" placeholder="Số điện thoại" />
-          <input type="text" name="subject" placeholder="Tiêu đề email" />
-        </div>
-        <textarea
-          name="message"
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Tin nhắn của bạn"
-        ></textarea>
-        <input type="submit" value="Gửi cho tôi" class="btn" />
-      </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <p class="copyright">&copy; DoThanhDat - All Rights Reserved</p>
-    </footer>
-
-    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
-    <script src="script.js"></script>
+    <section class="contact" id="contact"></section>
   </body>
+  <script src="./js/script.js"></script>
 </html>
