@@ -48,28 +48,34 @@ header {
   color: var(--text-color);
 }
 
-.nav-menu {
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links {
   display: none;
-  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.nav-menu a {
-  display: inline-block;
-  margin: 0 1.5rem;
-  color: var(--text-color);
-  font-weight: 500;
-  transition: all 0.6s;
-  font-size: 18px;
+.nav-links li {
+  list-style: none;
 }
 
-.navmenu a:hover {
-  transform: translateY(-5px);
+.nav-links a {
+  text-decoration: none;
+  color: #333;
 }
 
-.navmenu a.active-link {
-  color: #06001d;
-  font-weight: 600;
-  position: relative;
+.nav-links.active {
+  display: flex;
 }
 
 section {
@@ -112,6 +118,14 @@ section {
   white-space: nowrap;
 }
 
+.home-profession {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .home-content hr {
   width: 80px;
   height: 4px;
@@ -120,9 +134,7 @@ section {
 }
 
 .home-content h3 {
-  position: relative;
   font-weight: 500;
-  margin-bottom: 1rem;
 }
 
 .home-content p {
@@ -237,7 +249,7 @@ section {
 /* Projects Section */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax (400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2.5rem;
 }
 
@@ -401,4 +413,55 @@ section {
   background-color: #f7f7f2;
   color: #1e1e24;
   transform: translateY(-5px);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 25px;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .home {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .home-content {
+    display: flex;
+    grid-column: 1;
+    align-self: center;
+    justify-self: end;
+    align-items: start;
+    text-align: start;
+  }
+
+  .home-profession {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .home-img {
+    align-self: end;
+    grid-column: 2;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 }
